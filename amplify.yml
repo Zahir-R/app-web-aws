@@ -3,14 +3,13 @@ frontend:
   phases:
     preBuild:
       commands:
-        - rm -rf goocli-test/frontend/node_modules
         - cd goocli-test/frontend
         - npm install
     build:
       commands:
         - npm run generate
   artifacts:
-    baseDirectory: goocli-test/frontend/.output/public
+    baseDirectory: goocli-test/frontend/.amplify-hosting/static
     files:
       - '**/*'
   cache:

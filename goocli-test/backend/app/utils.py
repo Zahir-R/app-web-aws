@@ -13,8 +13,8 @@ ACCESS_TOKEN_EXPIRE_MINUTES = 60
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 # S3 Configuration
-AWS_REGION = os.getenv("AWS_REGION", "us-east-1")
-AWS_BUCKET_NAME = os.getenv("AWS_BUCKET_NAME", "menopause-app-storage")
+AWS_REGION = os.getenv("AAWS_REGION", "us-east-1")
+AWS_BUCKET_NAME = os.getenv("AAWS_BUCKET_NAME", "menopause-app-storage")
 s3_client = boto3.client('s3', region_name=AWS_REGION)
 
 def verify_password(plain_password, hashed_password):

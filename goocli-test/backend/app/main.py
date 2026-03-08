@@ -23,8 +23,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(auth.router, prefix="/auth", tags=["auth"])
-app.include_router(chat.router, prefix="/chat", tags=["chat"])
+app.include_router(auth.router, prefix="/auth", tags=["auth"])  # Enable to use routers of auth
+app.include_router(chat.router, prefix="/chat", tags=["chat"])  # Enable to use routers of chat
 
 @app.get("/")
 def read_root():

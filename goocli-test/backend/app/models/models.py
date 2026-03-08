@@ -3,6 +3,7 @@ from sqlalchemy.orm import relationship
 from datetime import datetime
 from app.database import Base
 
+# Correct type of objects usable by sqlalchemy DB, requires some understanding on how SQL works
 class User(Base):
     __tablename__ = "users"
 
